@@ -1,64 +1,57 @@
-<!DOCTYPE html>
 <html>
-        <head>
-        <title>My CGI program</title>
-      	<!-- Latest compiled and minified CSS -->
-      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<head>
+		<title>My CGI Program</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+		
+			
+		
+			
+			<div class="page-header">
+		 		<br>
+		 		<center><p>My First CGI Program</p></center>
+		 	
+		 		
+			</div>
+		
+	
 
-        </head>
+		<div class="main">
+		<form action="cgi-bin/simple.cgi" method="GET">  
+			<div class="row">
+			  <div class="form-group col-md-6">
+			    <label for="firstname">First Name</label>
+			    <input type="text" class="form-control" name="firstname" placeholder="Andrea">
+			  </div>
+			</div>
+			<div class="row">  
+			  <div class="form-group col-md-6">
+			    <label for="firstname">Last Name</label>
+			    <input type="text" class="form-control" name="lastname" placeholder="Rojas">
+			  </div>
+			</div>  
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		
+		<form action="cgi-bin/simple.cgi" method="GET">
+			<b>Pick a Color:</b><br>
+			<input type="checkbox" name="red" value=1> Red<br>
+			<input type="checkbox" name="green" value=1> Green<br>
+			<input type="checkbox" name="blue" value=1> Blue<br>
+			<input type="checkbox" name="gold" value=1> Gold<br>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 
-        <body>
-        	<div class= main>
-		        <h3>Simple CGI</h3>
-		       <center> <embed src="cgi-bin/simple.cgi"></center>
-        	</div>
-
-
-	<div class="row">
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <embed src="cgi-bin/simple.cgi"> 
-	    </a>
-			 <div class="caption">
-        <h3>Video 1</h3>
-      </div>
-	  </div>
-
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <embed src="cgi-bin/simple.cgi">
-	    </a>
-	     <div class="caption">
-        <h3>Video 2</h3>
-      </div>
-	  </div>
-
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <embed src="cgi-bin/simple.cgi">
-	    </a>
-	     <div class="caption">
-        <h3>Video 3</h3>
-      </div>
-	  </div>
-
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <embed src="cgi-bin/simple.cgi/script_name"> alt="...">
-	    </a>
-	     <div class="caption">
-        <h3>Video 4</h3>
-        <p>...</p>
-       
-      </div>
-	  </div>
 	</div>
+	<div class="date">
+			<center><p id="demo"></p><center>
+			<script>
+			document.getElementById("demo").innerHTML = Date();
+			</script>
+		</div>
 
-
-
-
-
-
-        </body>
+	</body>
 </html>

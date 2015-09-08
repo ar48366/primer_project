@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/perl -wT
 
 # This is a little CGI program
 ###################################################################
@@ -19,9 +19,29 @@
 # SERVER_PORT:       The port of the server.
 
 # Add a content type and a blank line
-echo "X-COMP-490: ${USER}"
-echo "Content-type: text/html"
-echo ""
-echo "<center><embed width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/C0DPdy98e4c\" frameborder=\"0\" allowfullscreen></embed></center>"
-#echo "<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Psv5dmrs3U0" frameborder="0" allowfullscreen></iframe>"
-echo "SCRIPT_NAME: <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Psv5dmrs3U0" frameborder="0" allowfullscreen></iframe> "
+print "Content-type: text/html\n\n";
+
+
+
+use CGI qw(:standard);
+use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
+use strict;
+
+print header;
+print start_html("Get Form");
+
+my %form;
+foreach my $p (param()) {
+    $form{$p} = param($p);
+    print "$p = $form{$p}<br>\n";
+}
+my @colors = ("red","green","blue","gold");
+foreach my $color (@colors) {
+    if (param($color)) {
+        print "You picked $color.\n";
+    }
+}
+
+
+
+print end_html;
