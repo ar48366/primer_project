@@ -1,0 +1,8 @@
+Primer Project
+Andrea Rojas
+
+Under my public_html directory I have a cgi-bin directory which contains a simple.cgi perl script that takes my form and get action and parses and returns the strings.
+
+My index.html file is just a simple form with textboxes and checkboxes.
+
+I'm unsure if I used CGI properly for my forms, but once you submit a form you get back the cgi content-type as well as the form values.
