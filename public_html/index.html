@@ -7,46 +7,40 @@
 	
 	<body>
 		
-			
+		<div class="page-header">
+			<br>
+			<center><p>My First CGI Program</p></center>
+		</div>
 		
-			
-			<div class="page-header">
-		 		<br>
-		 		<center><p>My First CGI Program</p></center>
-		 	
-		 		
-			</div>
-		
-	
-
 		<div class="main">
-		<form action="cgi-bin/simple.cgi" method="GET">  
-			<div class="row">
-			  <div class="form-group col-md-6">
-			    <label for="firstname">First Name</label>
-			    <input type="text" class="form-control" name="firstname" placeholder="Andrea">
-			  </div>
-			</div>
-			<div class="row">  
-			  <div class="form-group col-md-6">
-			    <label for="firstname">Last Name</label>
-			    <input type="text" class="form-control" name="lastname" placeholder="Rojas">
-			  </div>
-			</div>  
-			<button type="submit" class="btn btn-default">Submit</button>
-		</form>
+			<form action="cgi-bin/simple.cgi" method="GET">  
+				<div class="row">
+					<div class="form-group col-md-6">
+					    <label for="firstname">First Name</label>
+					    <input type="text" class="form-control" name="firstname" placeholder="Andrea">
+				  	</div>
+				</div>
+				<div class="row">  
+				  	<div class="form-group col-md-6">
+				    	<label for="firstname">Last Name</label>
+				    	<input type="text" class="form-control" name="lastname" placeholder="Rojas">
+				  </div>
+				</div>  
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
 		
-		<form action="cgi-bin/simple.cgi" method="GET">
-			<b>Pick a Color:</b><br>
-			<input type="checkbox" name="red" value=1> Red<br>
-			<input type="checkbox" name="green" value=1> Green<br>
-			<input type="checkbox" name="blue" value=1> Blue<br>
-			<input type="checkbox" name="gold" value=1> Gold<br>
-			<button type="submit" class="btn btn-default">Submit</button>
-		</form>
+			<form action="cgi-bin/simple.cgi" method="GET">
+				<b>Pick a Color:</b><br>
+				<input type="checkbox" name="red" value=1> Red<br>
+				<input type="checkbox" name="green" value=1> Green<br>
+				<input type="checkbox" name="blue" value=1> Blue<br>
+				<input type="checkbox" name="gold" value=1> Gold<br>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
 
-	</div>
-	<div class="date">
+		</div>
+		
+		<div class="date">
 			<center><p id="demo"></p><center>
 			<script>
 			document.getElementById("demo").innerHTML = Date();
