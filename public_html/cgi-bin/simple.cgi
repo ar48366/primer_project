@@ -43,5 +43,4 @@ foreach my $color (@colors) {
 }
 
 
-
 print end_html;
